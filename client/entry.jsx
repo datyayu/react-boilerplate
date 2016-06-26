@@ -26,16 +26,12 @@ render(
  **  HOT RELOADING CONFIG  **
  ****************************
  */
-
 // If you rename or delete the 'app.component.jsx' file,
-// make sure to change the constant below or you
+// make sure to change the strings below, otherwise you
 // won't get the cool hot-reload ;).
-const ROOT_COMPONENT_FILE = './app.component';
-
-// Enable hot reload on development server
 if (module.hot) {
-  module.hot.accept(ROOT_COMPONENT_FILE, () => {
-    const NextApp = require(ROOT_COMPONENT_FILE).default;
+  module.hot.accept('./app.component', () => {
+    const NextApp = require('./app.component').default;
 
     render(
       <AppContainer>
